@@ -1,0 +1,21 @@
+<section class="bettingStakes">
+  <section class="stakes">
+    <div class="stake f_s" (click)="selectStakeAm('05')"><div class="inner">0.5</div><div class="arrow-up" id="arrow_05" style="display : none;"></div></div>
+    <div class="stake s_s" (click)="selectStakeAm('1')"><div class="inner">1</div><div class="arrow-up" id="arrow_1" style="display : none;"></div></div>
+    <div class="stake t_s" (click)="selectStakeAm('5')"><div class="inner">5</div><div class="arrow-up" id="arrow_5" style="display : none;"></div></div>
+    <div class="stake fo_s" (click)="selectStakeAm('10')"><div class="inner">10</div><div class="arrow-up" id="arrow_10" style="display : none;"></div></div>
+    <div class="stake fi_s" (click)="selectStakeAm('25')"><div class="inner">25</div><div class="arrow-up" id="arrow_25" style="display : none;"></div></div>
+    <div class="stake si_s" (click)="selectStakeAm('50')"><div class="inner">50</div><div class="arrow-up" id="arrow_50" style="display : none;"></div></div>
+  </section>
+  <section class="state">
+    <div class="label">
+      Status :
+    </div>
+    <div class="state">
+      {{messageService.message}}
+    </div>
+    <div class="button" (click)="backMessage();">
+      Back
+    </div>
+  </section>
+</section>

@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+.bettingRoulette {
+  height : 270px;
+  width : 300px;
+  background-color: #d1ccc0;
+  font-family : "Open Sans";
+  display : inline-block;
+  margin-left : 6px;
+  border-radius : 3px;
+}

@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+.bettingStakes {
+  width : 85%;
+  height : 72px;
+  border-radius : 3px;
+  margin-left : auto;
+  margin-right : auto;
+  font-family : "Open Sans";
+  overflow : hidden;
+  margin-top : 20px;
+}
+.bettingStakes .stakes {
+  width : 44.5%;
+  background-color : #d1ccc0;
+  height : 66px;
+  border-radius : 3px;
+  font-family : "Open Sans";
+  overflow : hidden;
+  float : left;
+  padding-top : 6px;
+  padding-left : 7px;
+}
+
+.bettingStakes .stake {
+  width : 60px;
+  height : 60px;
+  background-color : #2c2c54;
+  border-radius : 50%;
+  font-family : "Open Sans";
+  opacity : .9;
+  cursor : pointer;
+  display : inline-block;
+  margin-right : 5px;
+}
+.bettingStakes .stake .inner {
+  width : 48px;
+  height : 48px;
+  background-color : #40407a;
+  border-radius : 50%;
+  font-family : "Open Sans";
+  position : relative;
+  top : 5.5px;
+  left : 6px;
+  opacity : .5;
+  text-align : center;
+  vertical-align : middle;
+  font-size : 18px;
+  line-height: 46px;
+  color : #FFF;
+  user-select : none;
+  -moz-user-select : none;
+  -webkit-user-select : none;
+  -o-user-select : none;
+  -ms-user-select : none;
+}
+.bettingStakes .state {
+  width : 51%;
+  background-color : #d1ccc0;
+  height : 72px;
+  border-radius : 3px;
+  font-family : "Open Sans";
+  overflow : hidden;
+  float : right;
+}
+.stakes .f_s {
+  background-color : #34ace0;
+}
+.stakes .f_s .inner {
+  background-color : #227093;
+}
+.stakes .s_s {
+  background-color : #706fd3;
+}
+.stakes .s_s .inner {
+  background-color : #474787;
+}
+.stakes .t_s {
+  background-color : #40407a;
+}
+.stakes .t_s .inner {
+  background-color : #2c2c54;
+}
+.stakes .fo_s {
+  background-color : #ffda79;
+}
+.stakes .fo_s .inner {
+  background-color : #ccae62;
+}
+.stakes .fi_s {
+  background-color : #ff793f;
+}
+.stakes .fi_s .inner {
+  background-color : #cd6133;
+}
+.stakes .si_s {
+  background-color : #ff5252;
+}
+.stakes .si_s .inner {
+  background-color : #b33939;
+}
+
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid #f7f1e3;
+  z-index : 999;
+  position : relative;
+  top : 6px;
+  left : 16px;
+}
+
+.bettingStakes .state .label {
+  font-size : 19px;
+  color : #2c2c54;
+  margin-left : 10px;
+  vertical-align : middle;
+  line-height : 68px;
+  user-select : none;
+  -webkit-user-select : none;
+  -moz-user-select : none;
+  -ms-user-select : none;
+  -o-user-select : none;
+  display : inline-block;
+  float : left;
+}
+.bettingStakes .state .state {
+  font-size : 19px;
+  color : #40407a;
+  margin-left : 10px;
+  vertical-align : middle;
+  line-height : 68px;
+  user-select : none;
+  -webkit-user-select : none;
+  -moz-user-select : none;
+  -ms-user-select : none;
+  -o-user-select : none;
+  display : inline-block;
+  float : left;
+}
+
+.button {
+  width : 50px;
+  height : 22px;
+  background-color : #40407a;
+  border : 2px solid #2c2c54;
+  font-size : 16px;
+  text-align : center;
+  cursor : pointer;
+  border-radius : 3px;
+  float : right;
+  color : #f7f1e3;
+  padding:  3px;
+  margin-top : 19px;
+  margin-right : 10px;
+  transition-duration : .5s;
+}
+.button:hover {
+  background-color : #2c2c54;
+  transition-duration : .5s;
+}

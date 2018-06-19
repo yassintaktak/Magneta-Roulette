@@ -1,0 +1,174 @@
+<section class="bettingTable">
+  <div class="bigZero">
+    <div class="number" (mousedown)="placeStake($event, 0)"  oncontextmenu="return false;" (mouseenter) ="selectStakes(0)" (mouseleave) ="deselect(0)">0</div>
+    <div class="stake_mini fo_s" id="current_stake_0" style="display : none;">
+      <div class="inner">
+
+      </div>
+    </div>
+  </div>
+  <div class="column" id="column_1">
+    <ul>
+      <li *ngFor="let number of column_1" id="bet_{{number}}" (mousedown)="placeStake($event, number)"  oncontextmenu="return false;" (mouseleave) ="deselect(number)" (mouseenter) ="selectStakes(number)" [class.red]="checkInArray(number)" [class.black]="!checkInArray(number)">
+        <div class="number">
+          {{number}}
+        </div>
+        <div class="stake_mini fo_s" id="current_stake_{{number}}" style="display : none;">
+          <div class="inner">
+
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="column" id="column_2">
+    <ul>
+      <li *ngFor="let number of column_2" id="bet_{{number}}" (mousedown)="placeStake($event, number)"  oncontextmenu="return false;" (mouseleave) ="deselect(number)" (mouseenter) ="selectStakes(number)" [class.red]="checkInArray(number)" [class.black]="!checkInArray(number)">
+        <div class="number">
+          {{number}}
+        </div>
+        <div class="stake_mini fo_s" id="current_stake_{{number}}" style="display : none;">
+          <div class="inner">
+
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="column" id="column_3">
+    <ul>
+      <li style="height : 55px !important;" *ngFor="let number of column_3" id="bet_{{number}}" (mousedown)="placeStake($event, number)"  oncontextmenu="return false;" (mouseleave) ="deselect(number)" (mouseenter) ="selectStakes(number)" [class.red]="checkInArray(number)" [class.black]="!checkInArray(number)">
+        <div class="number">
+          {{number}}
+        </div>
+        <div class="stake_mini fo_s" id="current_stake_{{number}}" style="display : none;">
+          <div class="inner">
+
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="colBet">
+    <div class="number" (mousedown)="placeStake($event, 'C1')"  oncontextmenu="return false;" (mouseleave) ="deselect('C1')" (mouseenter) ="selectStakes('C1')">
+      C1
+      <div class="stake_mini fo_s" id="current_stake_C1" style="display : none;">
+        <div class="inner">
+
+        </div>
+      </div>
+    </div>
+    <div class="number" style="margin-top : 40px;" (mousedown)="placeStake($event, 'C2')"  oncontextmenu="return false;" (mouseleave) ="deselect('C2')" (mouseenter) ="selectStakes('C2')">
+      C2
+      <div class="stake_mini fo_s" id="current_stake_C2" style="display : none;">
+        <div class="inner">
+
+        </div>
+      </div>
+    </div>
+    <div class="number" style="margin-top : 37px;" (mousedown)="placeStake($event, 'C3')"  oncontextmenu="return false;" (mouseleave) ="deselect('C3')" (mouseenter) ="selectStakes('C3')">
+      C3
+      <div class="stake_mini fo_s" id="current_stake_C3" style="display : none;">
+        <div class="inner">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bottomBettingTable">
+  <div class="dozen">
+    <div class="number" (mousedown)="placeStake($event, 'FD')"  oncontextmenu="return false;" (mouseleave) ="deselect('FD')" (mouseenter) ="selectStakes('FD')">
+      FD
+      <div class="stake_mini fo_s" id="current_stake_FD" style="display : none;">
+        <div class="inner">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dozen">
+    <div class="number" (mousedown)="placeStake($event, 'SD')"  oncontextmenu="return false;" (mouseleave) ="deselect('SD')" (mouseenter) ="selectStakes('SD')">
+      SD
+      <div class="stake_mini fo_s" id="current_stake_SD" style="display : none;">
+        <div class="inner">
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="dozen">
+    <div class="number" (mousedown)="placeStake($event, 'TD')"  oncontextmenu="return false;" (mouseleave) ="deselect('TD')" (mouseenter) ="selectStakes('TD')">
+      TD
+      <div class="stake_mini fo_s" id="current_stake_TD" style="display : none;">
+        <div class="inner">
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="bottomBettingTable" style="margin-top : 1px;">
+  <div class="hdozen">
+    <div class="number" (mousedown)="placeStake($event, '18f')"  oncontextmenu="return false;" (mouseleave) ="deselect('18f')" (mouseenter) ="selectStakes('18f')">
+      18
+    </div>
+    <div class="stake_mini fo_s" id="current_stake_18f" style="display : none;">
+      <div class="inner">
+
+      </div>
+    </div>
+  </div>
+  <div class="hdozen">
+    <div class="number" (mousedown)="placeStake($event, 'E')"  oncontextmenu="return false;" (mouseleave) ="deselect('E')" (mouseenter) ="selectStakes('E')">
+      E
+    </div>
+    <div class="stake_mini fo_s" id="current_stake_E" style="display : none;">
+      <div class="inner">
+
+      </div>
+    </div>
+  </div>
+  <div class="hdozen" style="background-color:#b33939">
+    <div class="number" (mousedown)="placeStake($event, 'R')"  oncontextmenu="return false;" (mouseleave) ="deselect('R')" (mouseenter) ="selectStakes('R')">
+      R
+    </div>
+    <div class="stake_mini fo_s" id="current_stake_R" style="display : none;">
+      <div class="inner">
+
+      </div>
+    </div>
+  </div>
+  <div class="hdozen" style="background-color:#000">
+    <div class="number" (mousedown)="placeStake($event, 'B')"  oncontextmenu="return false;" (mouseleave) ="deselect('B')" (mouseenter) ="selectStakes('B')">
+      B
+    </div>
+    <div class="stake_mini fo_s" id="current_stake_B" style="display : none;">
+      <div class="inner">
+
+      </div>
+    </div>
+  </div>
+  <div class="hdozen">
+    <div class="number" (mousedown)="placeStake($event, 'O')"  oncontextmenu="return false;" (mouseleave) ="deselect('O')" (mouseenter) ="selectStakes('O')">
+      0
+    </div>
+    <div class="stake_mini fo_s" id="current_stake_O" style="display : none;">
+      <div class="inner">
+
+      </div>
+    </div>
+  </div>
+  <div class="hdozen">
+    <div class="number" (mousedown)="placeStake($event, '19f')"  oncontextmenu="return false;" (mouseleave) ="deselect('19f')" (mouseenter) ="selectStakes('19f')">
+      19
+    </div>
+    <div class="stake_mini fo_s" id="current_stake_19f" style="display : none;">
+      <div class="inner">
+
+      </div>
+    </div>
+  </div>
+</section>

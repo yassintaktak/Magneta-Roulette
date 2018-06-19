@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+.bettingTable {
+  background-color : #d1ccc0;
+  width : 85%;
+  height : 230px;
+  border-radius : 3px;
+  margin-left : auto;
+  margin-right : auto;
+  font-family : "Open Sans";
+  overflow : hidden;
+}
+.bettingTable .bigZero {
+  background-color : #218c74;
+  border-radius : 3px 0px 0px 3px;
+  float : left;
+  height : 228px;
+  width : 70px;
+}
+.bettingTable .colBet {
+  background-color : #2c2c54;
+  border-radius : 0px 3px 3px 0px;
+  float : right;
+  height : 230px;
+  width : 88px;
+  margin-top : -236px;
+}
+
+.bettingTable .number {
+  width : 40px;
+  height : 34px;
+  border-radius : 50%;
+  border : 1px solid #f7f1e3;
+  font-size : 22px;
+  color : #f7f1e3;
+  text-align : center;
+  padding-top : 3px;
+  cursor : pointer;
+  margin-left : auto;
+  margin-right : auto;
+  transition-duration : .5s;
+  user-select : none;
+  -moz-user-select : none;
+  -webkit-user-select : none;
+  -o-user-select : none;
+  -ms-user-select : none;
+}
+.bettingTable .bigZero .number {
+  width : 40px;
+  height : 34px;
+  border-radius : 50%;
+  border : 1px solid #f7f1e3;
+  font-size : 22px;
+  color : #f7f1e3;
+  text-align : center;
+  padding-top : 3px;
+  cursor : pointer;
+  margin-left : auto;
+  margin-right : auto;
+  margin-top : 90px;
+  transition-duration : .5s;
+  user-select : none;
+  -moz-user-select : none;
+  -webkit-user-select : none;
+  -o-user-select : none;
+  -ms-user-select : none;
+}
+.bettingTable .colBet .number {
+  width : 40px;
+  height : 34px;
+  border-radius : 50%;
+  border : 1px solid #f7f1e3;
+  font-size : 22px;
+  color : #f7f1e3;
+  text-align : center;
+  padding-top : 3px;
+  cursor : pointer;
+  margin-left : auto;
+  margin-right : auto;
+  margin-top : 20px;
+  transition-duration : .5s;
+  user-select : none;
+  -moz-user-select : none;
+  -webkit-user-select : none;
+  -o-user-select : none;
+  -ms-user-select : none;
+}
+.bettingTable .bigZero .number:hover, .bettingTable .colBet .number:hover {
+  background-color : #f7f1e3;
+  color : #2c2c54;
+  transition-duration : .5s;
+}
+.bettingTable .number:hover {
+  background-color : #f7f1e3;
+  color : #2c2c54;
+  transition-duration : .5s;
+}
+
+.bettingTable .column {
+  margin-left : 70px;
+  width : 83%;
+  height : 77px;
+  margin-bottom : 1px;
+}
+
+.bettingTable ul,li {
+  margin : 0;
+  padding : 0;
+  display : block;
+}
+.bettingTable .black {
+  background-color : #000;
+}
+.bettingTable .red {
+  background-color : #b33939;
+}
+.bettingTable ul li {
+  width : 8.1%;
+  height : 60px;
+  border-radius : 3px;
+  text-align : center;
+  padding-top : 17px;
+  margin-left : 1px;
+  display : inline-block;
+  vertical-align: top;
+}
+
+.bottomBettingTable {
+  width : 70%;
+  margin-left : auto;
+  margin-right : auto;
+  position : relative;
+  left : -7px;
+  font-family : "Open Sans";
+}
+.bottomBettingTable .dozen {
+  width : 33%;
+  height : 50px;
+  background-color: #474787;
+  display : inline-block;
+  vertical-align: top;
+  margin-right : 1px;
+  border-radius : 3px;
+}
+.bottomBettingTable .dozen .number {
+  width : 40px;
+  height : 34px;
+  border-radius : 50%;
+  border : 1px solid #f7f1e3;
+  font-size : 22px;
+  color : #f7f1e3;
+  text-align : center;
+  padding-top : 3px;
+  cursor : pointer;
+  margin-left : auto;
+  margin-right : auto;
+  margin-top : 5px;
+  transition-duration : .5s;
+  user-select : none;
+  -moz-user-select : none;
+  -webkit-user-select : none;
+  -o-user-select : none;
+  -ms-user-select : none;
+}
+.bottomBettingTable .dozen .number:hover {
+  background-color : #f7f1e3;
+  color : #2c2c54;
+  transition-duration : .5s;
+}
+.bottomBettingTable .hdozen {
+  width : 16.4%;
+  height : 50px;
+  background-color: #227093;
+  display : inline-block;
+  margin-right : 1px;
+  border-radius : 3px;
+  vertical-align: top;
+}
+.bottomBettingTable .hdozen .number {
+  width : 40px;
+  height : 34px;
+  border-radius : 50%;
+  border : 1px solid #f7f1e3;
+  font-size : 22px;
+  color : #f7f1e3;
+  text-align : center;
+  padding-top : 3px;
+  cursor : pointer;
+  margin-left : auto;
+  margin-right : auto;
+  margin-top : 5px;
+  transition-duration : .5s;
+  user-select : none;
+  -moz-user-select : none;
+  -webkit-user-select : none;
+  -o-user-select : none;
+  -ms-user-select : none;
+}
+.bottomBettingTable .hdozen .number:hover {
+  background-color : #f7f1e3;
+  color : #2c2c54;
+  transition-duration : .5s;
+}
+
+.active {
+  background-color : #f7f1e3 !important;
+  color : #2c2c54 !important;
+  transition-duration : .5s;
+}
+
+.bettingTable .stake_mini  {
+  width : 25px;
+  height : 25px;
+  background-color : #2c2c54;
+  border-radius : 50%;
+  font-family : "Open Sans";
+  opacity : .9;
+  cursor : pointer;
+  display : inline-block;
+  margin-right : 5px;
+  position : relative;
+  top : -9px;
+  left : -9px;
+}
+.bottomBettingTable .stake_mini  {
+  width : 25px;
+  height : 25px;
+  background-color : #2c2c54;
+  border-radius : 50%;
+  font-family : "Open Sans";
+  opacity : .9;
+  cursor : pointer;
+  display : inline-block;
+  margin-right : 5px;
+  position : relative;
+  top : -31px;
+  left : -20px;
+}
+.bettingTable .stake_mini .inner , .bottomBettingTable .stake_mini  .inner {
+  width : 17px;
+  height : 17px;
+  background-color : #40407a;
+  border-radius : 50%;
+  font-family : "Open Sans";
+  position : relative;
+  top : 4px;
+  left : 4px;
+  opacity : .5;
+  text-align : center;
+  vertical-align : middle;
+  font-size : 11px;
+  line-height: 15px;
+  color : #FFF;
+}
+
+.f_s {
+  background-color : #34ace0 !important;
+}
+ .f_s .inner {
+  background-color : #227093 !important;
+}
+ .s_s {
+  background-color : #706fd3 !important;
+}
+ .s_s .inner {
+  background-color : #474787 !important;
+}
+ .t_s {
+  background-color : #40407a !important;
+}
+ .t_s .inner {
+  background-color : #2c2c54 !important;
+}
+ .fo_s {
+  background-color : #ffda79 !important;
+}
+ .fo_s .inner {
+  background-color : #ccae62 !important;
+}
+ .fi_s {
+  background-color : #ff793f !important;
+}
+ .fi_s .inner {
+  background-color : #cd6133 !important;
+}
+ .si_s {
+  background-color : #ff5252 !important;
+}
+.si_s .inner {
+  background-color : #b33939 !important;
+}

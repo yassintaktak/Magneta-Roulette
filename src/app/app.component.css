@@ -1,0 +1,22 @@
+.roulette {
+  width : 80%;
+  height : 707px;
+  margin : 0;
+  padding : 0;
+  display : block;
+  background-color : #f7f1e3;
+  border-radius : 7px;
+  border : 1px solid #aaa69d;
+  margin-left : auto;
+  margin-right : auto;
+  margin-top : 10px;
+  margin-bottom : 30px;
+}
+.roulette .bo {
+  margin-top : 5px;
+  margin-bottom : 5px;
+  width : 85%;
+  margin-left: auto;
+  margin-right: auto;
+  height : 270px;
+}
