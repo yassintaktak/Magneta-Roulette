@@ -110,6 +110,23 @@ export class HandlerService {
         }
       }
 
+      if(betlist[i].number.toString().split("|")[0] == "s2") {
+        if(wonnumber == (betlist[i].number.split("|")[1]) || wonnumber == (betlist[i].number.split("|")[2])) {
+          totalWinnings += betlist[i].stake*17;
+        }
+      }
+      if(betlist[i].number.toString().split("|")[0] == "s4") {
+        if(wonnumber == (betlist[i].number.split("|")[1]) || wonnumber == (betlist[i].number.split("|")[2]) || wonnumber == (betlist[i].number.split("|")[3]) || wonnumber == (betlist[i].number.split("|")[4])) {
+          totalWinnings += betlist[i].stake*8;
+        }
+      }
+      if(betlist[i].number.toString().split("|")[0] == "s6") {
+        if(wonnumber == (betlist[i].number.split("|")[1]) || wonnumber == (betlist[i].number.split("|")[2]) || wonnumber == (betlist[i].number.split("|")[3]) || wonnumber == (betlist[i].number.split("|")[4]) || wonnumber == (betlist[i].number.split("|")[5]) || wonnumber == (betlist[i].number.split("|")[6])) {
+          totalWinnings += betlist[i].stake*5;
+        }
+      }
+
+
     }
     return totalWinnings;
   }

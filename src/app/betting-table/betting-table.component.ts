@@ -30,7 +30,90 @@ export class BettingTableComponent implements OnInit {
     return found;
   }
 
+  placeSStake = function(event, stake) {
+    let tmpStk:string = stake;
+    let splitSt:string;
+    if(event.target.id == "split_2_bet") {
+      stake = "s2|"+(stake-3).toString()+"|"+(stake).toString();
+      splitSt = "current_split_stake_";
+    }
+    if(event.target.id == "split_4_bet") {
+      stake = "s4|"+(stake).toString()+"|"+(stake+3).toString()+"|"+((stake-1)).toString()+"|"+((stake-1)+3).toString();
+      splitSt = "current_split_4_stake_";
+    }
+    if(event.target.id == "split_6_bet") {
+      stake = "s6|"+(stake).toString()+"|"+(stake+1).toString()+"|"+((stake+2)).toString()+"|"+((stake+3)).toString()+"|"+((stake+4)).toString()+"|"+((stake+5)).toString();
+      splitSt = "current_split_6_stake_";
+    }
+    console.log(stake);
+    if(!this.rouletteServ.getBettingState())
+      return ;
+
+    if(parseFloat(this.rouletteServ.getTotalStake()+this.rouletteServ.getStake()) > parseFloat(this.user.getUserData("user_balance"))) {
+      this.messageService.add('No more funds.');
+      return ;
+    }
+
+    switch(event.buttons) {
+      case 1:
+        if(this.rouletteServ.getStake() == 0) {
+          this.messageService.add("Please chose a stake.");
+          return ;
+        }
+        let betStake = this.rouletteServ.getStake();
+        let newS = this.rouletteServ.addBet({number:stake, stake:betStake});
+        let className:string;
+        if(newS < 1) {
+          className = "f_s";
+        } else if(newS >= 1 && newS < 5) {
+          className = "s_s";
+        } else if(newS >= 5 && newS < 10) {
+          className = "t_s";
+        } else if(newS >= 10 && newS < 25) {
+          className = "fo_s";
+        } else if(newS >= 25 && newS < 50) {
+          className = "fi_s";
+        } else {
+          className = "si_s";
+        }
+
+        let currentStake = this.rouletteServ.getStake();
+        document.getElementById(splitSt+tmpStk).setAttribute("style", "");
+        document.getElementById(splitSt+tmpStk).getElementsByClassName("inner")[0].innerHTML = newS;
+        document.getElementById(splitSt+tmpStk).className = "stake_mini "+className;
+        break;
+
+      case 2:
+        let result = this.rouletteServ.removeStake(stake);
+        if(result < 1) {
+          className = "f_s";
+        } else if(result >= 1 && result < 5) {
+          className = "s_s";
+        } else if(result >= 5 && result < 10) {
+          className = "t_s";
+        } else if(result >= 10 && result < 25) {
+          className = "fo_s";
+        } else if(result >= 25 && result < 50) {
+          className = "fi_s";
+        } else {
+          className = "si_s";
+        }
+        if(result <= 0)
+          document.getElementById(splitSt+tmpStk).setAttribute("style", "display:none;");
+        else
+          document.getElementById(splitSt+tmpStk).setAttribute("style", "");
+
+        document.getElementById(splitSt+tmpStk).getElementsByClassName("inner")[0].innerHTML = result;
+        document.getElementById(splitSt+tmpStk).className = "stake_mini "+className;
+        break;
+    }
+
+  }
+
   placeStake = function(event, stake) {
+    if(event.target.id == "split_2_bet" || event.target.id == "split_4_bet" || event.target.id == "split_6_bet") {
+      return ;
+    }
     if(!this.rouletteServ.getBettingState())
       return ;
 

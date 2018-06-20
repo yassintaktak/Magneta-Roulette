@@ -74,6 +74,12 @@ export class RouletteService {
     this.betList = [];
     for(let i=0; i<=36; i++) {
       document.getElementById("current_stake_"+i).setAttribute("style", "display:none;");
+      if(document.getElementById("current_split_stake_"+i) != undefined)
+        document.getElementById("current_split_stake_"+i).setAttribute("style", "display:none;");
+      if(document.getElementById("current_split_4_stake_"+i) != undefined)
+        document.getElementById("current_split_4_stake_"+i).setAttribute("style", "display:none;");
+      if(document.getElementById("current_split_6_stake_"+i) != undefined)
+        document.getElementById("current_split_6_stake_"+i).setAttribute("style", "display:none;");
     }
     document.getElementById("current_stake_C1").setAttribute("style", "display:none;");
     document.getElementById("current_stake_C2").setAttribute("style", "display:none;");
